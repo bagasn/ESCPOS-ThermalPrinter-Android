@@ -3,84 +3,129 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="24dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Paper width MM"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/et_paper_width"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="48"
+                android:hint="Fuck you"
+                android:inputType="numberSigned" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Char per-line"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/et_num_char"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="32"
+                android:inputType="numberSigned" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:textAlignment="center">
+
+        <Button
+            android:id="@+id/button_bluetooth_browse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="Default printer" />
+
+        <Button
+            android:id="@+id/button_bluetooth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Print by bluetooth !" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_usb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Print by USB !" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:text="Click to print !" />
+            android:layout_marginRight="5dp"
+            android:text="IP :" />
 
+        <EditText
+            android:id="@+id/edittext_tcp_ip"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:digits="0123456789."
+            android:inputType="number" />
 
-        <LinearLayout
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="20dp"
-            android:textAlignment="center"
-            android:orientation="horizontal">
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="5dp"
+            android:text="Port :" />
 
-            <Button
-                android:id="@+id/button_bluetooth_browse"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-                android:text="Default printer"/>
-
-            <Button
-                android:id="@+id/button_bluetooth"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Print by bluetooth !" />
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/button_usb"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/edittext_tcp_port"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:text="Print by USB !" />
+            android:inputType="number" />
+    </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-                android:text="IP :" />
-
-            <EditText
-                android:id="@+id/edittext_tcp_ip"
-                android:layout_width="170dp"
-                android:layout_height="wrap_content"
-                android:digits="0123456789."
-                android:inputType="number" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="5dp"
-                android:text="Port :" />
-
-            <EditText
-                android:id="@+id/edittext_tcp_port"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:inputType="number" />
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/button_tcp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:text="Print by TCP !" />
+    <Button
+        android:id="@+id/button_tcp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Print by TCP !" />
 
 </LinearLayout>

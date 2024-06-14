@@ -1,6 +1,6 @@
 plugins {
     id 'com.android.library'
-    id 'maven-publish'
+//    id 'maven-publish'
 }
 
 def libraryVersionCode = 3003000
@@ -38,22 +38,22 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }
 
-
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                groupId = 'com.github.DantSu'
-                artifactId = 'ESCPOS-ThermalPrinter-Android'
-                version = libraryVersionName
-                pom {
-                    name = 'Android library for ESC/POS Thermal Printer'
-                    description = 'Useful library to help Android developers to print with (Bluetooth, TCP, USB) ESC/POS thermal printers.'
-                }
-                afterEvaluate {
-                    from components.release
-                }
-            }
-        }
-    }
-}
+//
+//afterEvaluate {
+//    publishing {
+//        publications {
+//            release(MavenPublication) {
+//                groupId = 'com.github.DantSu'
+//                artifactId = 'ESCPOS-ThermalPrinter-Android'
+//                version = libraryVersionName
+//                pom {
+//                    name = 'Android library for ESC/POS Thermal Printer'
+//                    description = 'Useful library to help Android developers to print with (Bluetooth, TCP, USB) ESC/POS thermal printers.'
+//                }
+//                afterEvaluate {
+//                    from components.release
+//                }
+//            }
+//        }
+//    }
+//}
